@@ -1,0 +1,68 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+#menu.open {
+  top: 50px;
+  left: 50px;
+}
+#menu.open a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menu.open a:hover {
+  color: tomato;
+}
+#menu {
+  display: none;
+  width: 200px;
+  /*   margin: -100px 0 0 -50px; */
+  padding: 20px;
+  background: #ededed;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu.open {
+  display: block;
+  transform: none;
+}
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+#burger {
+  height: 50px;
+  width: 60px;
+  background-color: #white;
+}
+.ingredients {
+  background-color: pink;
+  width: 50px;
+  height: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+  transition: opacity 0.25s, transform 0.25s, top 0.25s;
+}
+
+.open #top-bun {
+  transform: translate(0, 15px) rotate(45deg);
+}
+.open #meat {
+  opacity: 0;
+}
+.open #bottom-bun {
+  transform: translate(0, -15px) rotate(-45deg);
+}
